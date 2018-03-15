@@ -28,9 +28,41 @@ class BuzzmoveTestUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func research(app: XCUIApplication, text: String, elem: String) {
+        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        let textField = element.children(matching: .textField).element
+
+        textField.clearAndEnterText(text: text)
+        app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.otherElements[elem].tap()
+        
+        sleep(2)
+        app.buttons["Back"].tap()
     }
     
+    func testProcess() {
+        
+        let app = XCUIApplication()
+        research(app: app, text: "Eiffel tower", elem: "Eiffel Tower")
+        research(app: app, text: "Nando's london", elem: "Nando's Ealing Bond Street")
+
+    }
+    
+}
+
+extension XCUIElement {
+    func clearAndEnterText(text: String) {
+        guard let stringValue = self.value as? String else {
+            XCTFail("Tried to clear and enter text into a non string value")
+            return
+        }
+        
+        self.tap()
+        let deleteString = String(repeating: XCUIKeyboardKey.delete.rawValue, count: stringValue.characters.count)
+//        let deleteString = stringValue.characters.map { _ in XCUIKeyboardKeyDelete }.joined(separator: "")
+        
+        self.typeText(deleteString)
+        self.typeText(text)
+    }
 }

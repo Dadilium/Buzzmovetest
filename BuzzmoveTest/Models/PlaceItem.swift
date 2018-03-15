@@ -11,8 +11,6 @@ import MapKit
 
 class PlaceItem: NSObject, NSCoding, Mappable {
 
-    
-    
     var formatted_address: String?
     var latitude: Double?
     var longitude: Double?
@@ -29,6 +27,7 @@ class PlaceItem: NSObject, NSCoding, Mappable {
         mapping(map: map)
     }
     
+    //decode all the necessary variables for the offline manipulations
     required init(coder aDecoder: NSCoder) {
         self.formatted_address = aDecoder.decodeObject(forKey: "formatted_address") as? String ?? ""
         self.latitude = aDecoder.decodeDouble(forKey: "latitude")
@@ -39,8 +38,8 @@ class PlaceItem: NSObject, NSCoding, Mappable {
         self.photo = aDecoder.decodeObject(forKey: "photo") as? String ?? ""
     }
     
+    //encode all the necessary variables for the offline manipulations
     func encode(with aCoder: NSCoder) {
-        print("toto bitch")
         aCoder.encode(formatted_address, forKey: "formatted_address")
         aCoder.encode(latitude!, forKey: "latitude")
         aCoder.encode(longitude!, forKey: "longitude")
@@ -50,6 +49,7 @@ class PlaceItem: NSObject, NSCoding, Mappable {
         aCoder.encode(photo, forKey: "photo")
     }
     
+    //map each place of the API request into separated variables
     func mapping(map: Map) {
         formatted_address <- map["formatted_address"]
         latitude <- map["geometry.location.lat"]

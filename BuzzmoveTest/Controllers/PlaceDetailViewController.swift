@@ -18,7 +18,7 @@ class PlaceDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //init the content of the detail page
         if let place = placeDetail {
             placeImage.af_setImage(withURL: URL(string: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=\(place.photo ?? "")&key=\(APIKEY)")!, placeholderImage: UIImage(named: "buzzmovePlaceholder"), filter: AspectScaledToFillSizeWithRoundedCornersFilter(size: placeImage.frame.size, radius: 5.0))
             placeAddress.numberOfLines = 0
@@ -33,6 +33,7 @@ class PlaceDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Action to perform the unwind segue
     @IBAction func backToMap(_ sender: Any) {
         performSegue(withIdentifier: "unwindToMap", sender: nil)
     }

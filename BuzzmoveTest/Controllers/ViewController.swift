@@ -23,13 +23,14 @@ class ViewController: UIViewController, UITextFieldDelegate, MKMapViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //set all delegates
         searchBar.delegate = self
         self.map.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         
+        //if user is not connected to internet, retrieve the saved cache and display it
         if !GoogleMapAPI.shared.isOnline() {
-            print("no internet")
             Cache.shared.retrieveCache()
             tableView.reloadData()
             displayListAnnotationsFromPlace(list: Cache.shared.places)
@@ -42,6 +43,7 @@ class ViewController: UIViewController, UITextFieldDelegate, MKMapViewDelegate, 
         // Dispose of any resources that can be recreated.
     }
     
+    //launch the API call to get all places accorded to the search bar text
     func runSearch() {
         guard let str = self.searchBar.text else { return }
         GoogleMapAPI.shared.searchPlace(param: str, callback: { json in
@@ -54,23 +56,23 @@ class ViewController: UIViewController, UITextFieldDelegate, MKMapViewDelegate, 
         })
     }
     
+    //catch the click on a Annotation pin on the map and perform the segue to the second controller
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let place = getPlaceFromAnnotation(annotation: view.annotation as! MKPointAnnotation) {
-            place.toString()
             self.map.setCenter(CLLocationCoordinate2D(latitude: place.latitude!, longitude: place.longitude!), animated: true)
             performSegue(withIdentifier: "ShowDetail", sender: place)
         }
-        //segue
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail", let place = sender as? PlaceItem {
-            place.toString()
             let destination = segue.destination as! PlaceDetailViewController
             destination.placeDetail = place
         }
     }
     
+    //get the object PlaceItem according to the address of the annotation clicked on the map.
     func getPlaceFromAnnotation(annotation: MKPointAnnotation) -> PlaceItem? {
         for place in Cache.shared.places {
             if let ann = place.annotation, ann == annotation {
@@ -80,6 +82,7 @@ class ViewController: UIViewController, UITextFieldDelegate, MKMapViewDelegate, 
         return nil
     }
     
+    //when the field lose focus, then the research is launch
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         runSearch()
@@ -102,19 +105,18 @@ class ViewController: UIViewController, UITextFieldDelegate, MKMapViewDelegate, 
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceIdentifier", for: indexPath) as! PlaceTableViewCell
         let place = Cache.shared.places[indexPath.row]
         
-        cell.placeImage.af_setImage(withURL: URL(string: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=\(place.photo ?? "")&key=\(APIKEY)")!, placeholderImage: UIImage(named: "buzzmovePlaceholder"), filter: AspectScaledToFillSizeWithRoundedCornersFilter(size: cell.placeImage.frame.size, radius: 5.0))
-        cell.placeImage.sizeToFit()
+        GoogleMapAPI.shared.downloadImage(image: cell.placeImage, reference: place.photo ?? "")
         cell.placeAddress.text = place.formatted_address ?? ""
-        cell.placeAddress.adjustsFontSizeToFitWidth = true
-        cell.placeAddress.numberOfLines = 2
-        cell.placeAddress.minimumScaleFactor = 0.6
         cell.placeName.text = place.name ?? ""
         cell.placeTypes.text = (place.types ?? []).map({"\($0.replacingOccurrences(of: "_", with: " "))"}).joined(separator: ", ")
+        
         return cell
     }
     
+    //catch the unwind segue from the PlaceDetailController
     @IBAction func unwindToMap(segue: UIStoryboardSegue) {}
 
+    //print all the annotations from list into the map
     func displayListAnnotationsFromPlace(list: [PlaceItem]) {
         for place in list {
             if let lat = place.latitude, let lng = place.longitude, let name = place.name {

@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreData
+import GooglePlaces
+import GoogleMaps
+
+let APIKEY = "AIzaSyBwD8DGj5x-eono9fjrqXjYR8ut8Rkhcok"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UserDefaults.standard.set(APIKEY, forKey: "APIKey")
+        GMSPlacesClient.provideAPIKey(APIKEY)
+        GMSServices.provideAPIKey(APIKEY)
         return true
     }
 

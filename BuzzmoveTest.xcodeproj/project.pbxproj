@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77A167291CE07F4BE8BB6B91 /* Pods_BuzzmoveTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1052A1CB7350474A81903DB4 /* Pods_BuzzmoveTest.framework */; };
+		BC28544C2059C39D00F5D717 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28544B2059C39D00F5D717 /* Place.swift */; };
+		BC28544E2059C3C800F5D717 /* PlaceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28544D2059C3C800F5D717 /* PlaceItem.swift */; };
+		BC2854502059D89700F5D717 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28544F2059D89700F5D717 /* PlaceTableViewCell.swift */; };
+		BC2854522059D91D00F5D717 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2854512059D91D00F5D717 /* Cache.swift */; };
+		BC556954205AA68B00F4C7DC /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC556953205AA68B00F4C7DC /* PlaceDetailViewController.swift */; };
 		BCD081CF205952FB00B960F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD081CE205952FB00B960F7 /* AppDelegate.swift */; };
 		BCD081D1205952FB00B960F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD081D0205952FB00B960F7 /* ViewController.swift */; };
 		BCD081D4205952FB00B960F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD081D2205952FB00B960F7 /* Main.storyboard */; };
@@ -15,6 +21,7 @@
 		BCD081DC205952FB00B960F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD081DA205952FB00B960F7 /* LaunchScreen.storyboard */; };
 		BCD081E7205952FB00B960F7 /* BuzzmoveTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD081E6205952FB00B960F7 /* BuzzmoveTestTests.swift */; };
 		BCD081F2205952FB00B960F7 /* BuzzmoveTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD081F1205952FB00B960F7 /* BuzzmoveTestUITests.swift */; };
+		BCD082002059603F00B960F7 /* GoogleMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD081FF2059603F00B960F7 /* GoogleMapAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1052A1CB7350474A81903DB4 /* Pods_BuzzmoveTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuzzmoveTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FCF573008944EB457EA8630 /* Pods-BuzzmoveTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuzzmoveTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuzzmoveTest/Pods-BuzzmoveTest.debug.xcconfig"; sourceTree = "<group>"; };
+		BC28544B2059C39D00F5D717 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		BC28544D2059C3C800F5D717 /* PlaceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceItem.swift; sourceTree = "<group>"; };
+		BC28544F2059D89700F5D717 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		BC2854512059D91D00F5D717 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		BC556953205AA68B00F4C7DC /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		BCD081CB205952FB00B960F7 /* BuzzmoveTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuzzmoveTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD081CE205952FB00B960F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCD081D0205952FB00B960F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +63,8 @@
 		BCD081ED205952FB00B960F7 /* BuzzmoveTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuzzmoveTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD081F1205952FB00B960F7 /* BuzzmoveTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuzzmoveTestUITests.swift; sourceTree = "<group>"; };
 		BCD081F3205952FB00B960F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCD081FF2059603F00B960F7 /* GoogleMapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapAPI.swift; sourceTree = "<group>"; };
+		D8A83FDEFA6939D5F97B99F4 /* Pods-BuzzmoveTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuzzmoveTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuzzmoveTest/Pods-BuzzmoveTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A167291CE07F4BE8BB6B91 /* Pods_BuzzmoveTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +93,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		829C37078341FA620C66B5A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1052A1CB7350474A81903DB4 /* Pods_BuzzmoveTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC556955205AE17300F4C7DC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BCD081FF2059603F00B960F7 /* GoogleMapAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BC556956205AE18100F4C7DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC28544B2059C39D00F5D717 /* Place.swift */,
+				BC28544D2059C3C800F5D717 /* PlaceItem.swift */,
+				BC28544F2059D89700F5D717 /* PlaceTableViewCell.swift */,
+				BC2854512059D91D00F5D717 /* Cache.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC556957205AE18E00F4C7DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCD081D0205952FB00B960F7 /* ViewController.swift */,
+				BC556953205AA68B00F4C7DC /* PlaceDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		BCD081C2205952FB00B960F7 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +136,8 @@
 				BCD081E5205952FB00B960F7 /* BuzzmoveTestTests */,
 				BCD081F0205952FB00B960F7 /* BuzzmoveTestUITests */,
 				BCD081CC205952FB00B960F7 /* Products */,
+				C12A75332CFF32981D469D6D /* Pods */,
+				829C37078341FA620C66B5A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,8 +154,10 @@
 		BCD081CD205952FB00B960F7 /* BuzzmoveTest */ = {
 			isa = PBXGroup;
 			children = (
+				BC556957205AE18E00F4C7DC /* Controllers */,
+				BC556956205AE18100F4C7DC /* Models */,
+				BC556955205AE17300F4C7DC /* Network */,
 				BCD081CE205952FB00B960F7 /* AppDelegate.swift */,
-				BCD081D0205952FB00B960F7 /* ViewController.swift */,
 				BCD081D2205952FB00B960F7 /* Main.storyboard */,
 				BCD081D8205952FB00B960F7 /* Assets.xcassets */,
 				BCD081DA205952FB00B960F7 /* LaunchScreen.storyboard */,
@@ -128,6 +185,15 @@
 			path = BuzzmoveTestUITests;
 			sourceTree = "<group>";
 		};
+		C12A75332CFF32981D469D6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FCF573008944EB457EA8630 /* Pods-BuzzmoveTest.debug.xcconfig */,
+				D8A83FDEFA6939D5F97B99F4 /* Pods-BuzzmoveTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCD081F6205952FB00B960F7 /* Build configuration list for PBXNativeTarget "BuzzmoveTest" */;
 			buildPhases = (
+				ABDB1F8F41AFD2E4A36BC43A /* [CP] Check Pods Manifest.lock */,
 				BCD081C7205952FB00B960F7 /* Sources */,
 				BCD081C8205952FB00B960F7 /* Frameworks */,
 				BCD081C9205952FB00B960F7 /* Resources */,
+				32F65F982634192F10080A0F /* [CP] Embed Pods Frameworks */,
+				C87F631A9E979395F03139B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,14 +326,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32F65F982634192F10080A0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BuzzmoveTest/Pods-BuzzmoveTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuzzmoveTest/Pods-BuzzmoveTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABDB1F8F41AFD2E4A36BC43A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BuzzmoveTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C87F631A9E979395F03139B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BuzzmoveTest/Pods-BuzzmoveTest-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuzzmoveTest/Pods-BuzzmoveTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCD081C7205952FB00B960F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC556954205AA68B00F4C7DC /* PlaceDetailViewController.swift in Sources */,
 				BCD081D1205952FB00B960F7 /* ViewController.swift in Sources */,
 				BCD081D7205952FB00B960F7 /* BuzzmoveTest.xcdatamodeld in Sources */,
+				BC2854522059D91D00F5D717 /* Cache.swift in Sources */,
+				BC28544E2059C3C800F5D717 /* PlaceItem.swift in Sources */,
+				BC2854502059D89700F5D717 /* PlaceTableViewCell.swift in Sources */,
+				BCD082002059603F00B960F7 /* GoogleMapAPI.swift in Sources */,
 				BCD081CF205952FB00B960F7 /* AppDelegate.swift in Sources */,
+				BC28544C2059C39D00F5D717 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +566,7 @@
 		};
 		BCD081F7205952FB00B960F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FCF573008944EB457EA8630 /* Pods-BuzzmoveTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +581,7 @@
 		};
 		BCD081F8205952FB00B960F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8A83FDEFA6939D5F97B99F4 /* Pods-BuzzmoveTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

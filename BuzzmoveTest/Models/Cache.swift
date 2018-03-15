@@ -11,20 +11,21 @@ import Foundation
 class Cache {
     static let shared = Cache() //Singleton pattern
 
+    //local save of the last research
     var places: [PlaceItem] = []
     
+    //save the content into UserDefault after encoding
     func saveCache(cache: [PlaceItem]) {
         self.places = cache
         let encode = NSKeyedArchiver.archivedData(withRootObject: self.places)
-        UserDefaults.standard.set(encode, forKey: "cachedPlaces2")
+        UserDefaults.standard.set(encode, forKey: "cachePlaces")
         
     }
     
+    //retrieve the content saved back to the local variable
     func retrieveCache() {
-        let encode = UserDefaults.standard.data(forKey: "cachedPlaces2")
-        if let encode = encode {
-            let decPlaces = NSKeyedUnarchiver.unarchiveObject(with: encode) as? [PlaceItem]
-            if let decPlaces = decPlaces {
+        if let encode = UserDefaults.standard.data(forKey: "cachePlaces") {
+            if let decPlaces = NSKeyedUnarchiver.unarchiveObject(with: encode) as? [PlaceItem] {
                 self.places = decPlaces
             }
         }
